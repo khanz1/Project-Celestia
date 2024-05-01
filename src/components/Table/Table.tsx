@@ -47,37 +47,37 @@ export function CompactTable({ data }: any) {
         <Table.Tbody>
           <Table.Tr>
             <Th
-              sorted={sortBy === "fileName"}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting("fileName")}
+              // sorted={sortBy === "fileName"}
+              // reversed={reverseSortDirection}
+              // onSort={() => setSorting("fileName")}
             >
               Name
             </Th>
             <Th
-              sorted={sortBy === "fileUrl"}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting("fileUrl")}
+              // sorted={sortBy === "fileUrl"}
+              // reversed={reverseSortDirection}
+              // onSort={() => setSorting("fileUrl")}
             >
               URL
             </Th>
             <Th
-              sorted={sortBy === "fileType"}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting("fileType")}
+              // sorted={sortBy === "fileType"}
+              // reversed={reverseSortDirection}
+              // onSort={() => setSorting("fileType")}
             >
               Type
             </Th>
             <Th
-              sorted={sortBy === "publicFileUrl"}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting("publicFileUrl")}
+              // sorted={sortBy === "publicFileUrl"}
+              // reversed={reverseSortDirection}
+              // onSort={() => setSorting("publicFileUrl")}
             >
               Public URL
             </Th>
             <Th
-              sorted={sortBy === "createdAt"}
-              reversed={reverseSortDirection}
-              onSort={() => setSorting("createdAt")}
+              // sorted={sortBy === "createdAt"}
+              // reversed={reverseSortDirection}
+              // onSort={() => setSorting("createdAt")}
             >
               Created At
             </Th>
@@ -86,10 +86,10 @@ export function CompactTable({ data }: any) {
         <Table.Tbody>
           {sortedData.length > 0 ? (
             sortedData.map((row) => (
-              <Table.Tr key={row.name}>
-                <Table.Td>{row.name}</Table.Td>
+              <Table.Tr key={row.fileName}>
+                {/* <Table.Td>{row.name}</Table.Td>
                 <Table.Td>{row.email}</Table.Td>
-                <Table.Td>{row.company}</Table.Td>
+                <Table.Td>{row.company}</Table.Td> */}
               </Table.Tr>
             ))
           ) : (

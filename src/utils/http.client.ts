@@ -12,6 +12,10 @@ export const storageApi = axios.create({
   baseURL: process.env.NEXT_PUBLIC_STORAGE_API_URL
 });
 
+export const redirectApi = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_REDIRECT_API_URL
+});
+
 storageApi.interceptors.request.use((config) => {
   const token = getCookie('_at');
   if (token) {
@@ -19,3 +23,11 @@ storageApi.interceptors.request.use((config) => {
   }
   return config;
 })
+
+redirectApi.interceptors.request.use((config) => {
+  const token = getCookie("_at");
+  if (token) {
+    config.headers["Authorization"] = `Bearer ${token}`;
+  }
+  return config;
+});

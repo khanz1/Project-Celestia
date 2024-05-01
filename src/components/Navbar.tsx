@@ -29,11 +29,12 @@ const navList = [
   {
     label: "Redirects",
     icon: IconCalendarStats,
-    links: [
-      { label: "Upcoming releases", link: "/" },
-      { label: "Previous releases", link: "/" },
-      { label: "Releases schedule", link: "/" },
-    ],
+    link: "/redirects",
+    // links: [
+    //   { label: "Upcoming releases", link: "/" },
+    //   { label: "Previous releases", link: "/" },
+    //   { label: "Releases schedule", link: "/" },
+    // ],
   },
   { label: "Logs", link: "/logs", icon: IconPresentationAnalytics },
 ];

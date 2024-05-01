@@ -1,5 +1,5 @@
 "use client";
-import { RootLayoutProps } from "@/app/layout";
+import { RootLayoutProps } from "@/app/(authenticated)/layout";
 import { Box, ScrollArea } from "@mantine/core";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { Navbar } from "../components/Navbar";
@@ -11,7 +11,7 @@ export default function RootLayout(props: Readonly<RootLayoutProps>) {
       <NavigationProgress />
       <Box style={{ display: "flex" }}>
         <Navbar />
-        <ScrollArea h="100vh">
+        <ScrollArea h="100vh" w="100%">
           <Box component="main" p={10}>
             <GoogleOAuthProvider
               clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}
